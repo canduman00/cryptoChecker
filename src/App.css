@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+:root{
+  --wet-asphalt: #34495E;
+  --midnight-blue: #2C3E50;
+  
+  --ff-body:"Rubik", sans-serif
+}
+
+body{
+  background-color: var(--midnight-blue);
+  color:white;
+  padding:0;
+  margin:0;
+
+  font-family:var(--ff-body);
+}
+.cryptoHeader{
+  padding:min(15%, 5rem) min(5%, 5rem);
+  background:linear-gradient(var(--wet-asphalt) 80%, var(--midnight-blue));
+  display:grid;
+  place-items: center;
+}
+.searchBar{
+  font-size:2rem;
+  width:80%;
+
+  border:none;
+  border-radius:1rem;
+  background:#647687;
+  outline:none;
+  color:white;
+  padding:1rem 0.5rem;
+
+  transition: scale 200ms ease;
+  
+}
+.searchBar:focus{
+  scale: 1.05;
+}
+
+.cryptoDisplay{
+  display:grid;
+  place-items:center;
+  gap:2rem;
+}
+@media (max-width:600px){
+  .cryptoDisplay{
+    grid-template-columns: 1fr;
+
+  }
+}
+@media (min-width: 630px){
+  .cryptoDisplay{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 930px){
+  .cryptoDisplay{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1300px){
+  .cryptoDisplay{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+
+.coin-section{
+  display:grid;
+  place-items:center;
+
+  width:300px;
+  aspect-ratio: 1;
+  background-color: var(--wet-asphalt);
+  border-radius:1rem;
+
+  box-shadow: 0px 0px 5px white;
+
+  transition: scale 200ms ease;
+}
+.coin-section:hover{
+  scale: 1.05;
+}
+
+
+.priceChange{
+  display:flex;
+  gap:1rem;
+}
+
+.change-section > p{
+  line-height:1;
+  margin:0;
+  padding-bottom: 0.5rem;
+}
+.change-section > * + *{
+  padding-top: 0.5rem;
+  border-top: 1px solid white;
+}
