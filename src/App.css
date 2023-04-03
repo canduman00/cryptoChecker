@@ -37,6 +37,10 @@ body{
 .searchBar:focus{
   scale: 1.05;
 }
+.searchBar::placeholder{
+  color:white;
+  opacity:0.5;
+}
 
 .cryptoDisplay{
   display:grid;
